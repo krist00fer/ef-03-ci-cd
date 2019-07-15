@@ -29,6 +29,7 @@ steps:
     command: 'test'
 
 - task: DotNetCoreCLI@2
+  displayName: 'Publish Web Project(s)'
   inputs:
     command: 'publish'
     publishWebProjects: true
