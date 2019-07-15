@@ -10,14 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
 - task: DotNetCoreCLI@2
   displayName: 'Build solution'
   inputs:
@@ -27,6 +19,11 @@ steps:
   displayName: 'Test solution'
   inputs:
     command: 'test'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
 
 - task: PublishBuildArtifacts@1
   inputs:
