@@ -28,8 +28,8 @@ steps:
   inputs:
     command: 'test'
 
-- task: DotNetCoreCLI@2
-  displayName: 'Publish Web Project(s)'
+- task: PublishBuildArtifacts@1
   inputs:
-    command: 'publish'
-    publishWebProjects: true
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
