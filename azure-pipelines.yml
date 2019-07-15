@@ -20,10 +20,17 @@ steps:
   inputs:
     command: 'test'
 
+#- task: DotNetCoreCLI@2
+#  inputs:
+#    command: 'publish'
+#    publishWebProjects: true
+    
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
     publishWebProjects: true
+    arguments: '-o $(build.artifactsstagingdirectory)\\WebApi'
+
 
 - task: PublishBuildArtifacts@1
   inputs:
