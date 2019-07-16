@@ -14,7 +14,7 @@ namespace EF3.WebApi.Tests.Controllers
 
             var result = controller.Get().Value;
 
-            result.Should().BeEquivalentTo("hello", "world");
+            result.Should().BeEquivalentTo("Hello", "CI/CD");
         }
 
         [Fact]
@@ -25,6 +25,16 @@ namespace EF3.WebApi.Tests.Controllers
             var result = controller.Get(1).Value;
 
             result.Should().Be("value");
+        }
+
+        [Fact]
+        public void Post_WithAnyValues_ShouldNotCreateAnySideEffects()
+        {
+            var controller = new ValuesController();
+
+            controller.Post("Hello test!");
+
+            // No side effects
         }
     }
 }
