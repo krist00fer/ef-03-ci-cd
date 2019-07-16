@@ -14,7 +14,7 @@ namespace EF3.WebApi.Tests.Controllers
 
             var result = controller.Get().Value;
 
-            result.Should().BeEquivalentTo("value1", "value2");
+            result.Should().BeEquivalentTo("hello", "world");
         }
 
         [Fact]
