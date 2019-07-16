@@ -1,4 +1,4 @@
-#Instructions - Hard
+# Instructions - Hard
 
 Start by “forking” (remember a “fork” is a server-side clone) the repository found at https://github.com/krist00fer/ef-03-ci-cd-hands-on by first browsing to it and then clicking the “Fork” button up on the right hand side of the root page for the GitHub repository.
 
